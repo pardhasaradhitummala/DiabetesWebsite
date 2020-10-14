@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to Diabetes Predictor</h1>
+         <hr>
+        <form action="getPrediction" method="post">
+            {% csrf_token %}
+            <div class="form row">
+                <div class="col">
+                    <input type="text" class="form-control" name="num_preg" placeholder="num_preg">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="diastolic_bp" placeholder="diastolic_bp">
+                </div>
+            </div>
+            <hr>
+            <div class="form row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="insulin" name="insulin">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="bmi" name="bmi">
+                </div>
+            </div>
+             <hr>
+            <div class="form row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="diab_pred" name="diab_pred">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="age" name="age">
+                </div>
+            </div>
+             <hr>
+            <div class="form row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="skin" name="skin">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="gluc_con" name="glucose_conc">
+                </div>
+            </div>
+             <hr>
+            <input type="submit" class="btn btn-secondary btn-lg btn-block" value="Predict">
+
+        </form>
+
+
+    </div>
+</div>
+
+</body>
+</html>
